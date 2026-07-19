@@ -46,6 +46,14 @@ npx playwright install chromium
 node test/ui-blackbox.cjs
 ```
 
+## 项目文档
+
+| 文件 | 内容 |
+|:----|:------|
+| [`PLAN.md`](./PLAN.md) | 完整产品方案 — 定位、功能、技术方案、规则引擎、变现、风险对策 |
+| [`TEST.md`](./TEST.md) | 测试方案 & 结果 — 7 层测试架构，64 项测试状态 |
+| [`CONTEXT.md`](./CONTEXT.md) | 项目上下文 — 架构决策、开发环境、上架清单、V2 方向 |
+
 ## 项目结构
 
 ```
@@ -55,9 +63,9 @@ src/
 ├── lib/
 │   ├── db.ts          # Dexie IndexedDB (标签历史)
 │   ├── rule-engine.ts # 规则引擎核心
-│   └── __tests__/     # 单元测试
+│   └── __tests__/     # 单元测试 (61 tests)
 ├── rules/
-│   └── rules.json     # 300+ 条内置分组规则
+│   └── rules.json     # 328 条内置分组规则, 14 分组
 ├── sidepanel/
 │   ├── index.tsx      # React 入口
 │   ├── SidePanel.tsx  # 主面板
