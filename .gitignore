@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+build/
+dist/
+
+# Editor
+.DS_Store
+*.local
+*.swp
+*.swo
+*~
+
+# Plasmo
+.plasmo/
+
+# Test artifacts
+.test-user-data-*/
+ui-screenshots/
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*

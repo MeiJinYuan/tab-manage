@@ -1,0 +1,41 @@
+{
+  "name": "tab-manager",
+  "version": "1.0.0",
+  "description": "智能标签管家 — 自动分组管理浏览器标签页",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "manifest": {
+    "permissions": [
+      "tabs",
+      "sidePanel",
+      "storage",
+      "alarms",
+      "contextMenus"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ]
+  },
+  "dependencies": {
+    "@plasmohq/storage": "^1.15.0",
+    "dexie": "^4.0.0",
+    "fuse.js": "^7.0.0",
+    "plasmo": "^0.90.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.1.0",
+    "@types/chrome": "^0.0.280",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "jsdom": "^25.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
