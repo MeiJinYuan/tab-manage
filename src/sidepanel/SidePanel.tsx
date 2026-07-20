@@ -125,44 +125,86 @@ function SidePanel() {
       </footer>
 
       <style>{`
+        :root {
+          --bg: #1a1a2e;
+          --text: #e0e0e0;
+          --border: #2a2a4a;
+          --hover: #2a2a4a;
+          --active-bg: #4a4a8a;
+          --active-text: #fff;
+          --muted: #888;
+          --btn-border: #4a4a8a;
+          --btn-text: #aaa;
+          --scrollbar-thumb: #4a4a8a;
+          --suggest-close-border: #8a4a4a;
+          --suggest-close-text: #c88;
+          --suggest-close-hover: #aa5a5a;
+          --highlight-bg: #2a2a5a;
+          --highlight-border: #6a6aff;
+          --empty: #666;
+          --history-hover: #2a2a4a;
+          --tab-title: #ccc;
+        }
+        @media (prefers-color-scheme: light) {
+          :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --border: #e0e0e0;
+            --hover: #f0f0f0;
+            --active-bg: #e8e8ff;
+            --active-text: #4a4a8a;
+            --muted: #888;
+            --btn-border: #d0d0d0;
+            --btn-text: #666;
+            --scrollbar-thumb: #d0d0d0;
+            --suggest-close-border: #ffcccc;
+            --suggest-close-text: #cc4444;
+            --suggest-close-hover: #ee6666;
+            --highlight-bg: #e8e8ff;
+            --highlight-border: #6a6aff;
+            --empty: #999;
+            --history-hover: #f5f5f5;
+            --tab-title: #444;
+          }
+        }
         .sidepanel {
           display: flex;
           flex-direction: column;
           height: 100vh;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          background: #1a1a2e;
-          color: #e0e0e0;
+          background: var(--bg);
+          color: var(--text);
         }
         .header {
           padding: 12px 16px 8px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid #2a2a4a;
+          border-bottom: 1px solid var(--border);
         }
         .title { font-size: 16px; font-weight: 700; margin: 0; }
-        .tab-count { font-size: 12px; color: #888; }
+        .tab-count { font-size: 12px; color: var(--muted); }
         .tabs-nav {
           display: flex;
           padding: 4px 12px;
           gap: 4px;
-          border-bottom: 1px solid #2a2a4a;
+          border-bottom: 1px solid var(--border);
         }
         .tab-btn {
           flex: 1;
           padding: 6px;
           border: none;
           background: transparent;
-          color: #888;
+          color: var(--muted);
           cursor: pointer;
           font-size: 13px;
           border-radius: 6px;
           transition: all 0.2s;
         }
-        .tab-btn:hover { background: #2a2a4a; color: #e0e0e0; }
+        .tab-btn:hover { background: var(--hover); color: var(--text); }
         .tab-btn.active {
-          background: #4a4a8a;
-          color: #fff;
+          background: var(--active-bg);
+          color: var(--active-text);
           font-weight: 600;
         }
         .content {
@@ -172,26 +214,26 @@ function SidePanel() {
         }
         .footer {
           padding: 8px 12px;
-          border-top: 1px solid #2a2a4a;
+          border-top: 1px solid var(--border);
         }
         .sleep-btn {
           width: 100%;
           padding: 8px;
-          border: 1px solid #4a4a8a;
+          border: 1px solid var(--btn-border);
           background: transparent;
-          color: #aaa;
+          color: var(--btn-text);
           cursor: pointer;
           font-size: 12px;
           border-radius: 8px;
           transition: all 0.2s;
         }
         .sleep-btn:hover {
-          background: #4a4a8a;
-          color: #fff;
+          background: var(--hover);
+          color: var(--text);
         }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #4a4a8a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
       `}</style>
     </div>
   )
@@ -252,24 +294,24 @@ function SuggestClose() {
           padding: 8px 16px;
           font-size: 13px;
           font-weight: 600;
-          color: #888;
+          color: var(--muted, #888);
           display: flex;
           justify-content: space-between;
           align-items: center;
         }
         .close-all-btn {
           padding: 2px 8px;
-          border: 1px solid #8a4a4a;
+          border: 1px solid var(--suggest-close-border, #8a4a4a);
           background: transparent;
-          color: #c88;
+          color: var(--suggest-close-text, #c88);
           cursor: pointer;
           font-size: 11px;
           border-radius: 4px;
         }
-        .close-all-btn:hover { background: #8a4a4a; color: #fff; }
+        .close-all-btn:hover { background: var(--suggest-close-border, #8a4a4a); color: #fff; }
         .suggest-item {
           padding: 8px 16px;
-          border-bottom: 1px solid #2a2a4a;
+          border-bottom: 1px solid var(--border, #2a2a4a);
           display: flex;
           flex-direction: column;
           gap: 2px;
@@ -280,18 +322,18 @@ function SuggestClose() {
           text-overflow: ellipsis;
           white-space: nowrap;
         }
-        .suggest-meta { font-size: 11px; color: #666; }
+        .suggest-meta { font-size: 11px; color: var(--muted, #666); }
         .close-btn {
           align-self: flex-end;
           padding: 2px 8px;
           border: none;
-          background: #8a4a4a;
+          background: var(--suggest-close-border, #8a4a4a);
           color: #fff;
           cursor: pointer;
           font-size: 11px;
           border-radius: 4px;
         }
-        .close-btn:hover { background: #aa5a5a; }
+        .close-btn:hover { background: var(--suggest-close-hover, #aa5a5a); }
       `}</style>
     </div>
   )
@@ -323,17 +365,17 @@ function TabHistory() {
       <style>{`
         .history-item {
           padding: 8px 16px;
-          border-bottom: 1px solid #2a2a4a;
+          border-bottom: 1px solid var(--border, #2a2a4a);
           cursor: pointer;
         }
-        .history-item:hover { background: #2a2a4a; }
+        .history-item:hover { background: var(--history-hover, #2a2a4a); }
         .history-title {
           font-size: 13px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
-        .history-meta { font-size: 11px; color: #666; }
+        .history-meta { font-size: 11px; color: var(--muted, #666); }
       `}</style>
     </div>
   )

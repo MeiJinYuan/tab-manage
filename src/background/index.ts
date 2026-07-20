@@ -19,7 +19,7 @@ chrome.runtime.onInstalled.addListener(async () => {
   // 创建侧栏
   await chrome.sidePanel.setOptions({
     enabled: true,
-    path: "sidepanel/index.html",
+    path: "sidepanel.html",
   })
   // 允许所有站点打开侧栏
   await chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })

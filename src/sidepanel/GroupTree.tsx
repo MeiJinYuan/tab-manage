@@ -91,8 +91,8 @@ export default function GroupTree({
           transition: background 0.3s;
         }
         .group-section.highlighted {
-          background: #2a2a5a;
-          border-left: 3px solid #6a6aff;
+          background: var(--highlight-bg, #2a2a5a);
+          border-left: 3px solid var(--highlight-border, #6a6aff);
         }
         .group-header {
           display: flex;
@@ -103,20 +103,20 @@ export default function GroupTree({
           gap: 6px;
           transition: background 0.15s;
         }
-        .group-header:hover { background: #2a2a4a; }
-        .group-toggle { font-size: 10px; color: #666; width: 12px; }
+        .group-header:hover { background: var(--hover, #2a2a4a); }
+        .group-toggle { font-size: 10px; color: var(--muted, #666); width: 12px; }
         .group-icon { font-size: 16px; }
         .group-name { flex: 1; font-size: 14px; font-weight: 500; }
         .group-count {
           font-size: 12px;
-          color: #888;
-          background: #2a2a4a;
+          color: var(--muted, #888);
+          background: var(--hover, #2a2a4a);
           padding: 1px 6px;
           border-radius: 10px;
           min-width: 20px;
           text-align: center;
         }
-        .tab-list { border-left: 1px solid #2a2a4a; margin-left: 20px; }
+        .tab-list { border-left: 1px solid var(--border, #2a2a4a); margin-left: 20px; }
         .tab-item {
           display: flex;
           align-items: center;
@@ -125,14 +125,14 @@ export default function GroupTree({
           cursor: pointer;
           transition: background 0.15s;
         }
-        .tab-item:hover { background: #2a2a4a; }
+        .tab-item:hover { background: var(--hover, #2a2a4a); }
         .favicon { width: 16px; height: 16px; flex-shrink: 0; }
         .tab-title {
           font-size: 12px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          color: #ccc;
+          color: var(--tab-title, #ccc);
         }
       `}</style>
     </div>
