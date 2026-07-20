@@ -1,3 +1,23 @@
+/** 预编译的 URL 模式正则（一次性编译，避免每次 match 都 new RegExp） */
+let compiledPatterns: { regex: RegExp; group: string }[] | null = null
+
+function getCompiledPatterns(patterns: { match: string; group: string }[]) {
+  if (!compiledPatterns) {
+    compiledPatterns = patterns.map((p) => ({
+      regex: new RegExp(
+        "^" +
+          p.match
+            .replace(/[.+^${}()|[\]\\]/g, "\\$&")
+            .replace(/\*/g, ".*") +
+          "$",
+        "i"
+      ),
+      group: p.group,
+    }))
+  }
+  return compiledPatterns
+}
+
 /**
  * 规则引擎 — 根据 domain/URL/title 自动匹配标签分组
  *
@@ -44,19 +64,6 @@ function extractDomain(url: string): string {
 }
 
 /**
- * 匹配 URL pattern（支持 * 通配符）
- */
-function matchPattern(pattern: string, urlPath: string): boolean {
-  const regexStr =
-    "^" +
-    pattern
-      .replace(/[.+^${}()|[\]\\]/g, "\\$&")
-      .replace(/\*/g, ".*") +
-    "$"
-  return new RegExp(regexStr, "i").test(urlPath)
-}
-
-/**
  * 核心匹配函数
  * @param domain - 域名（小写，不含 www）
  * @param url - 完整 URL
@@ -94,9 +101,10 @@ export function matchGroup(
   const rules = customRules || (defaultRules as Rules)
   const normalizedUrl = normalizeUrl(url)
 
-  // ── 优先匹配 URL pattern（比 domain 更精确）──
-  for (const p of rules.pattern) {
-    if (matchPattern(p.match, normalizedUrl)) {
+  // ── 预编译模式匹配（比逐条 new RegExp 更快）──
+  const patterns = getCompiledPatterns(rules.pattern)
+  for (const p of patterns) {
+    if (p.regex.test(normalizedUrl)) {
       return p.group
     }
   }

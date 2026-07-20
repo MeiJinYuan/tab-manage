@@ -1,356 +1,2034 @@
 {
-  "version": 3,
+  "version": 4,
   "groups": [
-    {"id": "dev",       "name": "开发",     "icon": "🖥️"},
-    {"id": "work",      "name": "工作",     "icon": "💼"},
-    {"id": "email",     "name": "邮件",     "icon": "📧"},
-    {"id": "read",      "name": "阅读",     "icon": "📖"},
-    {"id": "video",     "name": "视频",     "icon": "🎬"},
-    {"id": "shop",      "name": "购物",     "icon": "🛒"},
-    {"id": "social",    "name": "社交",     "icon": "💬"},
-    {"id": "ai",        "name": "AI工具",   "icon": "🤖"},
-    {"id": "finance",   "name": "金融",     "icon": "💰"},
-    {"id": "news",      "name": "新闻",     "icon": "📰"},
-    {"id": "entertain", "name": "娱乐",     "icon": "🎮"},
-    {"id": "tools",     "name": "工具",     "icon": "🔧"},
-    {"id": "docs",      "name": "文档",     "icon": "📄"},
-    {"id": "other",     "name": "其他",     "icon": "📂"}
+    {
+      "id": "dev",
+      "name": "开发",
+      "icon": "🖥️"
+    },
+    {
+      "id": "work",
+      "name": "工作",
+      "icon": "💼"
+    },
+    {
+      "id": "email",
+      "name": "邮件",
+      "icon": "📧"
+    },
+    {
+      "id": "read",
+      "name": "阅读",
+      "icon": "📖"
+    },
+    {
+      "id": "video",
+      "name": "视频",
+      "icon": "🎬"
+    },
+    {
+      "id": "shop",
+      "name": "购物",
+      "icon": "🛒"
+    },
+    {
+      "id": "social",
+      "name": "社交",
+      "icon": "💬"
+    },
+    {
+      "id": "ai",
+      "name": "AI工具",
+      "icon": "🤖"
+    },
+    {
+      "id": "finance",
+      "name": "金融",
+      "icon": "💰"
+    },
+    {
+      "id": "news",
+      "name": "新闻",
+      "icon": "📰"
+    },
+    {
+      "id": "entertain",
+      "name": "娱乐",
+      "icon": "🎮"
+    },
+    {
+      "id": "tools",
+      "name": "工具",
+      "icon": "🔧"
+    },
+    {
+      "id": "docs",
+      "name": "文档",
+      "icon": "📄"
+    },
+    {
+      "id": "other",
+      "name": "其他",
+      "icon": "📂"
+    }
   ],
   "domain": {
-    "github.com": "dev",
-    "gitlab.com": "dev",
-    "bitbucket.org": "dev",
-    "stackoverflow.com": "dev",
-    "stackexchange.com": "dev",
-    "stackshare.io": "dev",
-    "npmjs.com": "dev",
-    "pypi.org": "dev",
-    "crates.io": "dev",
-    "dockerhub.com": "dev",
-    "hub.docker.com": "dev",
-    "dev.to": "dev",
-    "medium.com": "read",
-    "news.ycombinator.com": "news",
-    "producthunt.com": "news",
-    "techcrunch.com": "news",
-    "theverge.com": "news",
-    "arstechnica.com": "news",
-    "infoworld.com": "news",
-    "wired.com": "news",
-    "bloomberg.com": "news",
-    "reuters.com": "news",
-    "nytimes.com": "news",
-    "theguardian.com": "news",
-    "bbc.com": "news",
-    "cnn.com": "news",
-    "reddit.com": "social",
-    "twitter.com": "social",
-    "x.com": "social",
-    "linkedin.com": "social",
-    "facebook.com": "social",
-    "instagram.com": "social",
-    "tiktok.com": "social",
-    "discord.com": "social",
-    "slack.com": "work",
-    "microsoft.com": "dev",
-    "learn.microsoft.com": "docs",
-    "docs.microsoft.com": "docs",
-    "amazon.com": "shop",
-    "amazon.co.uk": "shop",
-    "amazon.de": "shop",
-    "amazon.co.jp": "shop",
-    "ebay.com": "shop",
-    "walmart.com": "shop",
-    "taobao.com": "shop",
-    "tmall.com": "shop",
-    "jd.com": "shop",
+    "01.ai": "ai",
+    "11ty.dev": "dev",
+    "1688.com": "shop",
+    "36kr.com": "news",
+    "51job.com": "work",
+    "accuweather.com": "tools",
+    "acfun.cn": "video",
+    "acm.org": "read",
+    "actix.rs": "dev",
+    "adidas.com": "shop",
+    "affine.pro": "docs",
+    "ai21.com": "ai",
+    "aider.chat": "dev",
+    "airbnb.com": "tools",
+    "airflow.apache.org": "dev",
+    "airtable.com": "work",
+    "alibaba.com": "shop",
     "aliexpress.com": "shop",
-    "bestbuy.com": "shop",
-    "youtube.com": "video",
-    "bilibili.com": "video",
-    "twitch.tv": "video",
-    "netflix.com": "entertain",
-    "hulu.com": "entertain",
-    "disneyplus.com": "entertain",
-    "spotify.com": "entertain",
-    "music.youtube.com": "entertain",
-    "pandora.com": "entertain",
-    "chatgpt.com": "ai",
-    "chat.openai.com": "ai",
-    "claude.ai": "ai",
-    "bard.google.com": "ai",
-    "gemini.google.com": "ai",
-    "perplexity.ai": "ai",
-    "phind.com": "ai",
-    "poe.com": "ai",
-    "huggingface.co": "ai",
-    "replicate.com": "ai",
-    "notion.so": "docs",
-    "notion.site": "docs",
-    "google.com/docs": "docs",
-    "docs.google.com": "docs",
-    "confluence.net": "docs",
-    "atlassian.net": "work",
-    "jira.com": "work",
+    "aliyun.com": "dev",
+    "aljazeera.com": "news",
+    "amazon.co.jp": "shop",
+    "amazon.co.uk": "shop",
+    "amazon.com": "shop",
+    "amazon.de": "shop",
+    "angular.io": "dev",
+    "ansible.com": "dev",
+    "ant.design": "dev",
+    "anthropic.com": "ai",
+    "any.do": "tools",
+    "anyscale.com": "ai",
+    "anytype.io": "docs",
+    "apidog.com": "dev",
+    "apifox.com": "dev",
+    "apipost.cn": "dev",
+    "apnews.com": "news",
+    "apollographql.com": "dev",
+    "apple.com/music": "entertain",
+    "arstechnica.com": "news",
+    "arxiv.org": "read",
     "asana.com": "work",
-    "trello.com": "work",
-    "linear.app": "work",
-    "miro.com": "work",
-    "figma.com": "work",
-    "canva.com": "work",
-    "google.com/mail": "email",
-    "mail.google.com": "email",
-    "outlook.live.com": "email",
-    "outlook.office.com": "email",
-    "mail.yahoo.com": "email",
-    "mail.proton.me": "email",
+    "asos.com": "shop",
+    "astro.build": "dev",
+    "atlassian.net": "work",
+    "aws.amazon.com": "dev",
+    "axios.com": "news",
+    "baichuan-ai.com": "ai",
+    "baidu.com/bce": "dev",
+    "baike.baidu.com": "read",
+    "balsamiq.com": "work",
+    "banana.dev": "ai",
+    "bankofamerica.com": "finance",
+    "bard.google.com": "ai",
+    "basecamp.com": "work",
+    "baseten.co": "ai",
+    "bbc.com": "news",
+    "behance.net": "work",
+    "bestbuy.com": "shop",
+    "betterstack.com": "dev",
+    "bilibili.com": "video",
+    "binance.com": "finance",
+    "bitbucket.org": "dev",
+    "bloomberg.com": "news",
+    "bolt.new": "dev",
+    "booking.com": "tools",
+    "box.com": "docs",
+    "brilliant.org": "read",
+    "bun.sh": "dev",
+    "businessinsider.com": "news",
+    "caixin.com": "news",
+    "calendar.google.com": "tools",
     "calendly.com": "tools",
-    "zoom.us": "tools",
-    "meet.google.com": "tools",
-    "teams.microsoft.com": "work",
+    "canva.com": "work",
+    "capacities.io": "docs",
+    "capitalone.com": "finance",
+    "carbon.now.sh": "dev",
+    "cerebras.net": "ai",
+    "chakra-ui.com": "dev",
+    "character.ai": "ai",
+    "chase.com": "finance",
+    "chat.openai.com": "ai",
+    "chatgpt.com": "ai",
+    "cheat.sh": "dev",
+    "checkvist.com": "tools",
+    "chef.io": "dev",
+    "chess.com": "entertain",
+    "chromadb.com": "ai",
+    "circleci.com": "dev",
+    "claude-code.com": "ai",
+    "claude.ai": "ai",
+    "clickhouse.com": "dev",
+    "clickup.com": "work",
+    "clojure.org": "dev",
+    "cloud.tencent.com": "dev",
+    "cloudflare.com": "dev",
+    "cnbc.com": "news",
+    "cnblogs.com": "dev",
+    "cnn.com": "news",
+    "cockroachlabs.com": "dev",
+    "coda.io": "docs",
+    "codecademy.com": "dev",
+    "codeium.com": "ai",
+    "codepen.io": "dev",
+    "coderbyte.com": "dev",
+    "codesandbox.io": "dev",
+    "codewars.com": "dev",
+    "codility.com": "dev",
+    "cohere.com": "ai",
+    "coinbase.com": "finance",
+    "comet.com": "ai",
+    "commandnotfound.com": "dev",
+    "confluence.net": "docs",
+    "console.aws.amazon.com": "dev",
+    "console.cloud.google.com": "dev",
+    "consul.io": "dev",
+    "continue.dev": "ai",
+    "copilot.microsoft.com": "ai",
+    "costco.com": "shop",
+    "coursera.org": "read",
+    "crates.io": "dev",
+    "csdn.net": "dev",
+    "cursor.com": "ai",
+    "cypress.io": "dev",
+    "d2l.ai": "dev",
+    "dagster.io": "dev",
+    "dart.dev": "dev",
+    "datacamp.com": "dev",
+    "datadoghq.com": "dev",
+    "dbdiagram.io": "dev",
+    "dbdocs.io": "dev",
+    "deepinfra.com": "ai",
+    "deepseek.com": "ai",
+    "deezer.com": "entertain",
+    "deno.land": "dev",
+    "depop.com": "shop",
+    "desktop.dev": "dev",
+    "dev.to": "dev",
+    "developer.mozilla.org": "dev",
+    "devhints.io": "dev",
+    "dgtle.com": "news",
+    "diagrams.net": "work",
+    "digitalocean.com": "dev",
+    "dingtalk.com": "work",
+    "discord.com": "social",
+    "disneyplus.com": "entertain",
+    "djangoproject.com": "dev",
+    "docker.com": "dev",
+    "dockerhub.com": "dev",
+    "docs.docker.com": "dev",
+    "docs.google.com": "docs",
+    "docs.microsoft.com": "docs",
+    "docusaurus.io": "dev",
+    "doordash.com": "tools",
+    "douban.com": "read",
+    "douyu.com": "video",
+    "draw.io": "work",
+    "dribbble.com": "work",
     "drive.google.com": "docs",
     "dropbox.com": "docs",
-    "onedrive.live.com": "docs",
-    "google.com/calendar": "tools",
-    "calendar.google.com": "tools",
-    "wikipedia.org": "read",
-    "baike.baidu.com": "read",
-    "zhihu.com": "read",
-    "quora.com": "read",
-    "stackoverflow.com": "dev",
-    "codepen.io": "dev",
-    "codesandbox.io": "dev",
-    "replit.com": "dev",
-    "gitpod.io": "dev",
-    "vercel.com": "dev",
-    "netlify.com": "dev",
-    "cloudflare.com": "dev",
-    "aws.amazon.com": "dev",
-    "console.aws.amazon.com": "dev",
-    "portal.azure.com": "dev",
-    "console.cloud.google.com": "dev",
-    "digitalocean.com": "dev",
-    "postman.com": "dev",
-    "kaggle.com": "dev",
-    "leetcode.com": "dev",
-    "geeksforgeeks.org": "dev",
-    "udemy.com": "read",
-    "coursera.org": "read",
-    "edx.org": "read",
-    "udacity.com": "read",
-    "pluralsight.com": "read",
-    "linkedin.com/learning": "read",
-    "npm.runkit.com": "dev",
-    "jsfiddle.net": "dev",
-    "observablehq.com": "dev",
+    "duckdb.org": "dev",
+    "dvc.org": "dev",
+    "dw.com": "news",
+    "dynalist.io": "tools",
     "dzone.com": "dev",
-    "sitepoint.com": "dev",
-    "tutorialspoint.com": "read",
-    "w3schools.com": "dev",
-    "mdn.dev": "dev",
-    "developer.mozilla.org": "dev",
-    "typescriptlang.org": "dev",
-    "python.org": "dev",
-    "nodejs.org": "dev",
-    "react.dev": "dev",
-    "nextjs.org": "dev",
-    "nuxt.com": "dev",
-    "vuejs.org": "dev",
-    "angular.io": "dev",
-    "docker.com": "dev",
-    "docs.docker.com": "dev",
-    "kubernetes.io": "dev",
-    "istio.io": "dev",
-    "grpc.io": "dev",
-    "graphql.org": "dev",
-    "apollographql.com": "dev",
-    "supabase.com": "dev",
-    "firebase.google.com": "dev",
-    "mongodb.com": "dev",
-    "redis.io": "dev",
-    "postgresql.org": "dev",
-    "mysql.com": "dev",
-    "sqlite.org": "dev",
-    "prisma.io": "dev",
-    "hasura.io": "dev",
-    "datadoghq.com": "dev",
-    "newrelic.com": "dev",
-    "sentry.io": "dev",
-    "rollbar.com": "dev",
-    "circleci.com": "dev",
-    "github.co": "dev",
-    "gitlab-ci.com": "dev",
-    "jenkins.io": "dev",
-    "travis-ci.com": "dev",
-    "readthedocs.org": "docs",
-    "weather.com": "tools",
-    "accuweather.com": "tools",
-    "bankofamerica.com": "finance",
-    "chase.com": "finance",
-    "wellsfargo.com": "finance",
-    "capitalone.com": "finance",
-    "paypal.com": "finance",
-    "stripe.com": "finance",
-    "robinhood.com": "finance",
-    "coinbase.com": "finance",
-    "binance.com": "finance",
-    "tradingview.com": "finance",
-    "yahoo.com/finance": "finance",
-    "google.com/finance": "finance",
-    "investing.com": "finance",
-    "bloomberg.com": "news",
-    "wsj.com": "news",
-    "ft.com": "news",
+    "ebay.com": "shop",
     "economist.com": "news",
-    "forbes.com": "news",
-    "businessinsider.com": "news",
-    "cnbc.com": "news",
-    "spotify.com": "entertain",
-    "soundcloud.com": "entertain",
-    "deezer.com": "entertain",
-    "apple.com/music": "entertain",
-    "imdb.com": "entertain",
-    "rottentomatoes.com": "entertain",
-    "metacritic.com": "entertain",
-    "ign.com": "entertain",
-    "polygon.com": "entertain",
-    "gog.com": "entertain",
-    "steampowered.com": "entertain",
+    "edx.org": "read",
+    "elastic.co": "dev",
+    "electronjs.org": "dev",
+    "elixir-lang.org": "dev",
+    "elm-lang.org": "dev",
+    "elpaís.com": "news",
     "epicgames.com": "entertain",
-    "chess.com": "entertain",
-    "lichess.org": "entertain",
-    "airbnb.com": "tools",
-    "booking.com": "tools",
-    "expedia.com": "tools",
-    "uber.com": "tools",
-    "lyft.com": "tools",
-    "doordash.com": "tools",
-    "ubereats.com": "tools",
-    "yelp.com": "tools",
-    "tripadvisor.com": "tools",
-    "zillow.com": "tools",
-    "redfin.com": "tools",
-    "maps.google.com": "tools",
-    "google.com/maps": "tools",
-    "translate.google.com": "tools",
-    "google.com/translate": "tools",
-    "photos.google.com": "tools",
-    "keep.google.com": "tools",
-    "google.com/keep": "tools",
-    "evernote.com": "docs",
-    "onenote.com": "docs",
-    "todoist.com": "tools",
-    "ticktick.com": "tools",
-    "any.do": "tools",
-    "things.app": "tools",
-    "raindrop.io": "tools",
-    "pocket.co": "read",
-    "getpocket.com": "read",
-    "instapaper.com": "read",
-    "feedly.com": "read",
-    "inoreader.com": "read",
-    "overleaf.com": "docs",
-    "latex-project.org": "docs",
-    "arxiv.org": "read",
-    "scholar.google.com": "read",
-    "semanticscholar.org": "read",
-    "researchgate.net": "read",
-    "acm.org": "read",
-    "ieee.org": "read",
-    "springer.com": "read",
-    "tailwindcss.com": "dev",
-    "chakra-ui.com": "dev",
-    "mui.com": "dev",
-    "ant.design": "dev",
-    "storybook.js.org": "dev",
-    "jestjs.io": "dev",
-    "vitest.dev": "dev",
-    "playwright.dev": "dev",
-    "cypress.io": "dev",
+    "erdlab.io": "dev",
     "eslint.org": "dev",
-    "prettier.io": "dev",
-    "deno.land": "dev",
-    "bun.sh": "dev",
-    "rust-lang.org": "dev",
-    "golang.org": "dev",
-    "go.dev": "dev",
-    "openai.com": "ai",
-    "anthropic.com": "ai",
-    "google.com/ai": "ai",
-    "meta.ai": "ai",
-    "stability.ai": "ai",
-    "midjourney.com": "ai",
-    "runwayml.com": "ai",
-    "character.ai": "ai",
-    "you.com": "ai",
-    "cohere.com": "ai",
-    "wandb.ai": "ai",
-    "weightsandbiases.com": "ai",
-    "gradio.app": "ai",
-    "langchain.com": "ai",
-    "llamaindex.ai": "ai",
-    "pinecone.io": "ai",
-    "weaviate.io": "ai",
-    "qdrant.tech": "ai",
-    "chromadb.com": "ai",
-    "milvus.io": "ai",
+    "etsy.com": "shop",
+    "evernote.com": "docs",
+    "excalidraw.com": "work",
+    "exercism.org": "dev",
+    "expedia.com": "tools",
+    "explainthis.io": "dev",
+    "facebook.com": "social",
+    "fast.ai": "dev",
+    "fastapi.tiangolo.com": "dev",
+    "fastmail.com": "email",
+    "feedly.com": "read",
+    "feishu.cn": "work",
+    "figma.com": "work",
+    "firebase.google.com": "dev",
+    "fireworks.ai": "ai",
+    "fitbit.com": "tools",
+    "flask.palletsprojects.com": "dev",
+    "flickr.com": "social",
+    "flutter.dev": "dev",
+    "forbes.com": "news",
+    "framer.com": "work",
+    "france24.com": "news",
+    "freecodecamp.org": "dev",
+    "ft.com": "news",
+    "gaode.com": "tools",
+    "geekpark.net": "news",
+    "geeksforgeeks.org": "dev",
+    "gemini.google.com": "ai",
+    "getpocket.com": "read",
+    "ghost.org": "read",
+    "gitbook.com": "docs",
+    "github.co": "dev",
+    "github.com": "dev",
+    "gitlab-ci.com": "dev",
+    "gitlab.com": "dev",
+    "gitpod.io": "dev",
     "gmail.com": "email",
+    "go.dev": "dev",
+    "gog.com": "entertain",
+    "gohugo.io": "dev",
+    "golang.org": "dev",
+    "goodreads.com": "read",
+    "google.com/ai": "ai",
+    "google.com/calendar": "tools",
+    "google.com/docs": "docs",
+    "google.com/finance": "finance",
+    "google.com/fit": "tools",
+    "google.com/keep": "tools",
+    "google.com/mail": "email",
+    "google.com/maps": "tools",
+    "google.com/translate": "tools",
+    "gradio.app": "ai",
+    "grafana.com": "dev",
+    "graphcore.ai": "ai",
+    "graphql.org": "dev",
+    "groq.com": "ai",
+    "grpc.io": "dev",
+    "hackerrank.com": "dev",
+    "hailo.ai": "ai",
+    "hashicorp.com": "dev",
+    "haskell.org": "dev",
+    "hasura.io": "dev",
+    "health.apple.com": "tools",
+    "healthline.com": "read",
+    "here.com": "tools",
+    "hm.com": "shop",
+    "homedepot.com": "shop",
+    "hoppscotch.io": "dev",
+    "howtogeek.com": "read",
+    "httpie.io": "dev",
+    "huaweicloud.com": "dev",
+    "hub.docker.com": "dev",
+    "huggingface.co": "ai",
+    "hulu.com": "entertain",
+    "huxiu.com": "news",
+    "huya.com": "video",
+    "icloud.com": "docs",
     "icloud.com/mail": "email",
-    "fastmail.com": "email"
+    "icourse163.org": "read",
+    "ieee.org": "read",
+    "ifanr.com": "news",
+    "ifttt.com": "tools",
+    "ign.com": "entertain",
+    "ikea.com": "shop",
+    "imdb.com": "entertain",
+    "incident.io": "work",
+    "influxdata.com": "dev",
+    "infoworld.com": "news",
+    "inoreader.com": "read",
+    "insomnia.rest": "dev",
+    "instagram.com": "social",
+    "instapaper.com": "read",
+    "integromat.com": "tools",
+    "investing.com": "finance",
+    "invisionapp.com": "work",
+    "iqiyi.com": "video",
+    "istio.io": "dev",
+    "ithome.com": "news",
+    "jd.com": "shop",
+    "jekyllrb.com": "dev",
+    "jenkins.io": "dev",
+    "jestjs.io": "dev",
+    "jianshu.com": "read",
+    "jiemian.com": "news",
+    "jira.com": "work",
+    "jsfiddle.net": "dev",
+    "juejin.cn": "dev",
+    "julialang.org": "dev",
+    "kaggle.com": "dev",
+    "kakao.com": "social",
+    "kanzhun.com": "work",
+    "kayak.com": "tools",
+    "keep.google.com": "tools",
+    "kestra.io": "dev",
+    "khanacademy.org": "read",
+    "kimi.moonshot.cn": "ai",
+    "kiwi.com": "tools",
+    "kotlinlang.org": "dev",
+    "ktor.io": "dev",
+    "kubernetes.io": "dev",
+    "kugou.com": "entertain",
+    "kuwo.cn": "entertain",
+    "lagou.com": "work",
+    "langchain.com": "ai",
+    "laravel.com": "dev",
+    "larksuite.com": "work",
+    "latepost.com": "news",
+    "latex-project.org": "docs",
+    "learn.microsoft.com": "docs",
+    "leetcode.com": "dev",
+    "leiphone.com": "news",
+    "lemonde.fr": "news",
+    "lepton.ai": "ai",
+    "lichess.org": "entertain",
+    "liepin.com": "work",
+    "lifehacker.com": "read",
+    "line.me": "social",
+    "linear.app": "work",
+    "lingyiwanwu.com": "ai",
+    "linkedin.com": "social",
+    "linkedin.com/learning": "read",
+    "lit.dev": "dev",
+    "llamaindex.ai": "ai",
+    "logseq.com": "docs",
+    "logz.io": "dev",
+    "lovable.dev": "dev",
+    "lowes.com": "shop",
+    "lyft.com": "tools",
+    "mail.google.com": "email",
+    "mail.proton.me": "email",
+    "mail.yahoo.com": "email",
+    "maimai.cn": "work",
+    "make.com": "tools",
+    "makeuseof.com": "read",
+    "map.baidu.com": "tools",
+    "maps.google.com": "tools",
+    "masterclass.com": "read",
+    "mayoclinic.org": "read",
+    "mdn.dev": "dev",
+    "medium.com": "read",
+    "meet.google.com": "tools",
+    "mega.nz": "docs",
+    "megvii.com": "ai",
+    "mercari.com": "shop",
+    "messenger.com": "social",
+    "meta.ai": "ai",
+    "metacritic.com": "entertain",
+    "mgtv.com": "video",
+    "microsoft.com": "dev",
+    "midjourney.com": "ai",
+    "milvus.io": "ai",
+    "minimax.com": "ai",
+    "miro.com": "work",
+    "mistral.ai": "ai",
+    "mlflow.org": "dev",
+    "modal.com": "ai",
+    "momondo.com": "tools",
+    "monday.com": "work",
+    "mongodb.com": "dev",
+    "motherduck.com": "dev",
+    "mp.weixin.qq.com": "read",
+    "msdmanuals.com": "read",
+    "mui.com": "dev",
+    "music.163.com": "entertain",
+    "music.youtube.com": "entertain",
+    "myfitnesspal.com": "tools",
+    "mysql.com": "dev",
+    "n8n.io": "dev",
+    "neon.tech": "dev",
+    "neptune.ai": "ai",
+    "nestjs.com": "dev",
+    "netflix.com": "entertain",
+    "netlify.com": "dev",
+    "newrelic.com": "dev",
+    "news.ycombinator.com": "news",
+    "nextcloud.com": "docs",
+    "nextjs.org": "dev",
+    "nih.gov": "read",
+    "nike.com": "shop",
+    "nikkei.com": "news",
+    "nodejs.org": "dev",
+    "nomadproject.io": "dev",
+    "notion.com": "docs",
+    "notion.site": "docs",
+    "notion.so": "docs",
+    "nowcoder.com": "work",
+    "npm.runkit.com": "dev",
+    "npmjs.com": "dev",
+    "npr.org": "news",
+    "nuxt.com": "dev",
+    "nytimes.com": "news",
+    "observablehq.com": "dev",
+    "obsidian.md": "docs",
+    "ocaml.org": "dev",
+    "okjike.com": "social",
+    "onedrive.live.com": "docs",
+    "onenote.com": "docs",
+    "open.163.com": "read",
+    "openai.com": "ai",
+    "openapi-generator.tech": "dev",
+    "openclaw.com": "ai",
+    "openml.org": "dev",
+    "opensearch.org": "dev",
+    "openstreetmap.org": "tools",
+    "opsgenie.com": "work",
+    "oschina.net": "dev",
+    "outline.com": "docs",
+    "outlook.live.com": "email",
+    "outlook.office.com": "email",
+    "overleaf.com": "docs",
+    "owncloud.com": "docs",
+    "packer.io": "dev",
+    "pagerduty.com": "work",
+    "pandora.com": "entertain",
+    "paperswithcode.com": "dev",
+    "paypal.com": "finance",
+    "pcloud.com": "docs",
+    "penpot.app": "work",
+    "perplexity.ai": "ai",
+    "phind.com": "ai",
+    "photos.google.com": "tools",
+    "pinduoduo.com": "shop",
+    "pinecone.io": "ai",
+    "pingdom.com": "dev",
+    "pingwest.com": "news",
+    "pinterest.com": "social",
+    "pipedream.com": "dev",
+    "planetscale.com": "dev",
+    "playwright.dev": "dev",
+    "pluralsight.com": "read",
+    "pocket.co": "read",
+    "poe.com": "ai",
+    "politico.com": "news",
+    "polygon.com": "entertain",
+    "portal.azure.com": "dev",
+    "poshmark.com": "shop",
+    "postgresql.org": "dev",
+    "postman.com": "dev",
+    "postwoman.io": "dev",
+    "preactjs.com": "dev",
+    "prefect.io": "dev",
+    "prettier.io": "dev",
+    "prisma.io": "dev",
+    "producthunt.com": "news",
+    "proginn.com": "work",
+    "prometheus.io": "dev",
+    "pulumi.com": "dev",
+    "puppet.com": "dev",
+    "pypi.org": "dev",
+    "python.org": "dev",
+    "qdrant.tech": "ai",
+    "qingcloud.com": "dev",
+    "qiniu.com": "dev",
+    "qq.com": "social",
+    "quarkus.io": "dev",
+    "quora.com": "read",
+    "qwik.dev": "dev",
+    "qzone.qq.com": "social",
+    "racket-lang.org": "dev",
+    "raindrop.io": "tools",
+    "ray.so": "dev",
+    "react.dev": "dev",
+    "reactnative.dev": "dev",
+    "readthedocs.org": "docs",
+    "reddit.com": "social",
+    "redfin.com": "tools",
+    "redis.io": "dev",
+    "redocly.com": "dev",
+    "remix.run": "dev",
+    "replicate.com": "ai",
+    "replit.com": "dev",
+    "researchgate.net": "read",
+    "reuters.com": "news",
+    "roadmap.sh": "dev",
+    "roamresearch.com": "docs",
+    "robinhood.com": "finance",
+    "rocket.rs": "dev",
+    "rollbar.com": "dev",
+    "rome2rio.com": "tools",
+    "rottentomatoes.com": "entertain",
+    "rubyonrails.org": "dev",
+    "runwayml.com": "ai",
+    "rust-lang.org": "dev",
+    "sambanova.ai": "ai",
+    "scala-lang.org": "dev",
+    "scholar.google.com": "read",
+    "scmp.com": "news",
+    "segmentfault.com": "dev",
+    "semanticscholar.org": "read",
+    "sensetime.com": "ai",
+    "sentry.io": "dev",
+    "serverless.com": "dev",
+    "shixiseng.com": "work",
+    "shopify.com": "shop",
+    "signal.org": "social",
+    "sitepoint.com": "dev",
+    "sketch.com": "work",
+    "skillshare.com": "read",
+    "skyscanner.com": "tools",
+    "slack.com": "work",
+    "slite.com": "docs",
+    "smartsheet.com": "work",
+    "sohu.com/v": "video",
+    "solidjs.com": "dev",
+    "solidot.org": "news",
+    "soundcloud.com": "entertain",
+    "sourcegraph.com": "dev",
+    "spiegel.de": "news",
+    "splunk.com": "dev",
+    "spotify.com": "entertain",
+    "spring.io": "dev",
+    "springer.com": "read",
+    "sqlite.org": "dev",
+    "squidfunk.com": "dev",
+    "sspai.com": "read",
+    "stability.ai": "ai",
+    "stackexchange.com": "dev",
+    "stackoverflow.com": "dev",
+    "stackshare.io": "dev",
+    "statuspage.io": "dev",
+    "steampowered.com": "entertain",
+    "stenciljs.com": "dev",
+    "stepfun.com": "ai",
+    "stoplight.io": "dev",
+    "storybook.js.org": "dev",
+    "strava.com": "tools",
+    "stripe.com": "finance",
+    "substack.com": "read",
+    "supabase.com": "dev",
+    "svelte.dev": "dev",
+    "sveltekit.dev": "dev",
+    "swagger.io": "dev",
+    "swift.org": "dev",
+    "synology.com": "docs",
+    "tabnine.com": "ai",
+    "tailwindcss.com": "dev",
+    "taobao.com": "shop",
+    "target.com": "shop",
+    "tauri.app": "dev",
+    "teambition.com": "work",
+    "teams.microsoft.com": "work",
+    "techcrunch.com": "news",
+    "telegram.org": "social",
+    "temporal.io": "dev",
+    "terraform.io": "dev",
+    "theguardian.com": "news",
+    "theodinproject.com": "dev",
+    "thepaper.cn": "news",
+    "theverge.com": "news",
+    "things.app": "tools",
+    "ticktick.com": "tools",
+    "tidb.io": "dev",
+    "tieba.baidu.com": "social",
+    "tiktok.com": "social",
+    "tmall.com": "shop",
+    "todoist.com": "tools",
+    "together.ai": "ai",
+    "tokio.rs": "dev",
+    "tongyi.aliyun.com": "ai",
+    "topcoder.com": "dev",
+    "tower.im": "work",
+    "tradingview.com": "finance",
+    "translate.google.com": "tools",
+    "travis-ci.com": "dev",
+    "trello.com": "work",
+    "tripadvisor.com": "tools",
+    "tumblr.com": "social",
+    "tutorialspoint.com": "read",
+    "twitch.tv": "video",
+    "twitter.com": "social",
+    "typescriptlang.org": "dev",
+    "uber.com": "tools",
+    "ubereats.com": "tools",
+    "ucloud.cn": "dev",
+    "udacity.com": "read",
+    "udemy.com": "read",
+    "uniqlo.com": "shop",
+    "uptimerobot.com": "dev",
+    "uxpin.com": "work",
+    "v.qq.com": "video",
+    "v0.dev": "dev",
+    "v2ex.com": "dev",
+    "vagrantup.com": "dev",
+    "vaultproject.io": "dev",
+    "vercel.com": "dev",
+    "vinted.com": "shop",
+    "vitest.dev": "dev",
+    "volcengine.com": "dev",
+    "vuejs.org": "dev",
+    "w3schools.com": "dev",
+    "walmart.com": "shop",
+    "wandb.ai": "ai",
+    "weather.com": "tools",
+    "weaviate.io": "ai",
+    "web.telegram.org": "social",
+    "web.whatsapp.com": "social",
+    "webflow.com": "work",
+    "webmd.com": "read",
+    "weibo.com": "social",
+    "weightsandbiases.com": "ai",
+    "weixin.qq.com": "social",
+    "wellsfargo.com": "finance",
+    "whatsapp.com": "social",
+    "whimsical.com": "work",
+    "wikihow.com": "read",
+    "wikipedia.org": "read",
+    "wikiwand.com": "read",
+    "wired.com": "news",
+    "work.weixin.qq.com": "work",
+    "workflowy.com": "tools",
+    "wrike.com": "work",
+    "wsj.com": "news",
+    "x.ai": "ai",
+    "x.com": "social",
+    "xianyu.com": "shop",
+    "xiaohongshu.com": "social",
+    "xuetangx.com": "read",
+    "y.qq.com": "entertain",
+    "yahoo.com/finance": "finance",
+    "yelp.com": "tools",
+    "yicai.com": "news",
+    "you.com": "ai",
+    "youku.com": "video",
+    "youtube.com": "video",
+    "yuanbao.tencent.com": "ai",
+    "zalando.com": "shop",
+    "zapier.com": "tools",
+    "zara.com": "shop",
+    "zeit.de": "news",
+    "zeplin.io": "work",
+    "zhihu.com": "read",
+    "zhipin.com": "work",
+    "zhipuai.cn": "ai",
+    "zhuanlan.zhihu.com": "read",
+    "ziglang.org": "dev",
+    "zillow.com": "tools",
+    "zoom.us": "tools"
   },
   "pattern": [
-    {"match": "github.com/*/pull/*", "group": "dev"},
-    {"match": "github.com/*/issues/*", "group": "dev"},
-    {"match": "github.com/*/commit/*", "group": "dev"},
-    {"match": "google.com/mail/*", "group": "email"},
-    {"match": "mail.google.com/*", "group": "email"},
-    {"match": "calendar.google.com/*", "group": "tools"},
-    {"match": "drive.google.com/*", "group": "docs"},
-    {"match": "docs.google.com/document/*", "group": "docs"},
-    {"match": "docs.google.com/spreadsheets/*", "group": "docs"},
-    {"match": "docs.google.com/presentation/*", "group": "docs"},
-    {"match": "meet.google.com/*", "group": "tools"},
-    {"match": "photos.google.com/*", "group": "tools"},
-    {"match": "keep.google.com/*", "group": "tools"},
-    {"match": "translate.google.com/*", "group": "tools"},
-    {"match": "maps.google.com/*", "group": "tools"},
-    {"match": "amazon.com/*/dp/*", "group": "shop"},
-    {"match": "amazon.com/dp/*", "group": "shop"},
-    {"match": "youtube.com/watch*", "group": "video"},
-    {"match": "twitch.tv/*", "group": "video"},
-    {"match": "reddit.com/r/*", "group": "social"},
-    {"match": "twitter.com/*/status/*", "group": "social"},
-    {"match": "x.com/*/status/*", "group": "social"},
-    {"match": "linkedin.com/in/*", "group": "social"},
-    {"match": "linkedin.com/jobs/*", "group": "work"},
-    {"match": "linkedin.com/learning/*", "group": "read"},
-    {"match": "figma.com/file/*", "group": "work"},
-    {"match": "notion.so/*", "group": "docs"},
-    {"match": "atlassian.net/browse/*", "group": "work"},
-    {"match": "linear.app/*", "group": "work"},
-    {"match": "trello.com/b/*", "group": "work"},
-    {"match": "miro.com/app/*", "group": "work"},
-    {"match": "slack.com/archives/*", "group": "work"},
-    {"match": "stackoverflow.com/questions/*", "group": "dev"},
-    {"match": "medium.com/*", "group": "read"},
-    {"match": "dev.to/*", "group": "dev"},
-    {"match": "wikipedia.org/wiki/*", "group": "read"},
-    {"match": "zhihu.com/question/*", "group": "read"},
-    {"match": "zhihu.com/people/*", "group": "social"},
-    {"match": "bilibili.com/video/*", "group": "video"},
-    {"match": "play.google.com/store/*", "group": "tools"},
-    {"match": "apps.apple.com/*", "group": "tools"}
+    {
+      "match": "github.com/*/pull/*",
+      "group": "dev"
+    },
+    {
+      "match": "github.com/*/issues/*",
+      "group": "dev"
+    },
+    {
+      "match": "github.com/*/commit/*",
+      "group": "dev"
+    },
+    {
+      "match": "google.com/mail/*",
+      "group": "email"
+    },
+    {
+      "match": "mail.google.com/*",
+      "group": "email"
+    },
+    {
+      "match": "calendar.google.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "drive.google.com/*",
+      "group": "docs"
+    },
+    {
+      "match": "docs.google.com/document/*",
+      "group": "docs"
+    },
+    {
+      "match": "docs.google.com/spreadsheets/*",
+      "group": "docs"
+    },
+    {
+      "match": "docs.google.com/presentation/*",
+      "group": "docs"
+    },
+    {
+      "match": "meet.google.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "photos.google.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "keep.google.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "translate.google.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "maps.google.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "amazon.com/*/dp/*",
+      "group": "shop"
+    },
+    {
+      "match": "amazon.com/dp/*",
+      "group": "shop"
+    },
+    {
+      "match": "youtube.com/watch*",
+      "group": "video"
+    },
+    {
+      "match": "twitch.tv/*",
+      "group": "video"
+    },
+    {
+      "match": "reddit.com/r/*",
+      "group": "social"
+    },
+    {
+      "match": "twitter.com/*/status/*",
+      "group": "social"
+    },
+    {
+      "match": "x.com/*/status/*",
+      "group": "social"
+    },
+    {
+      "match": "linkedin.com/in/*",
+      "group": "social"
+    },
+    {
+      "match": "linkedin.com/jobs/*",
+      "group": "work"
+    },
+    {
+      "match": "linkedin.com/learning/*",
+      "group": "read"
+    },
+    {
+      "match": "figma.com/file/*",
+      "group": "work"
+    },
+    {
+      "match": "notion.so/*",
+      "group": "docs"
+    },
+    {
+      "match": "atlassian.net/browse/*",
+      "group": "work"
+    },
+    {
+      "match": "linear.app/*",
+      "group": "work"
+    },
+    {
+      "match": "trello.com/b/*",
+      "group": "work"
+    },
+    {
+      "match": "miro.com/app/*",
+      "group": "work"
+    },
+    {
+      "match": "slack.com/archives/*",
+      "group": "work"
+    },
+    {
+      "match": "stackoverflow.com/questions/*",
+      "group": "dev"
+    },
+    {
+      "match": "medium.com/*",
+      "group": "read"
+    },
+    {
+      "match": "dev.to/*",
+      "group": "dev"
+    },
+    {
+      "match": "wikipedia.org/wiki/*",
+      "group": "read"
+    },
+    {
+      "match": "zhihu.com/question/*",
+      "group": "read"
+    },
+    {
+      "match": "zhihu.com/people/*",
+      "group": "social"
+    },
+    {
+      "match": "bilibili.com/video/*",
+      "group": "video"
+    },
+    {
+      "match": "play.google.com/store/*",
+      "group": "tools"
+    },
+    {
+      "match": "apps.apple.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "github.com/*/discussions/*",
+      "group": "dev"
+    },
+    {
+      "match": "github.com/*/releases/*",
+      "group": "dev"
+    },
+    {
+      "match": "github.com/*/wiki/*",
+      "group": "docs"
+    },
+    {
+      "match": "github.com/*/actions/*",
+      "group": "dev"
+    },
+    {
+      "match": "github.com/*/projects/*",
+      "group": "work"
+    },
+    {
+      "match": "github.com/*/security/*",
+      "group": "dev"
+    },
+    {
+      "match": "github.com/*/code-search/*",
+      "group": "dev"
+    },
+    {
+      "match": "github.com/settings/*",
+      "group": "tools"
+    },
+    {
+      "match": "gitlab.com/*/merge_requests/*",
+      "group": "dev"
+    },
+    {
+      "match": "gitlab.com/*/issues/*",
+      "group": "dev"
+    },
+    {
+      "match": "gitlab.com/*/pipelines/*",
+      "group": "dev"
+    },
+    {
+      "match": "docs.google.com/forms/*",
+      "group": "tools"
+    },
+    {
+      "match": "docs.google.com/drawings/*",
+      "group": "work"
+    },
+    {
+      "match": "google.com/drive/*",
+      "group": "docs"
+    },
+    {
+      "match": "google.com/photos/*",
+      "group": "tools"
+    },
+    {
+      "match": "google.com/search*",
+      "group": "tools"
+    },
+    {
+      "match": "google.com/shopping*",
+      "group": "shop"
+    },
+    {
+      "match": "google.com/flights*",
+      "group": "tools"
+    },
+    {
+      "match": "google.com/travel*",
+      "group": "tools"
+    },
+    {
+      "match": "google.com/finance*",
+      "group": "finance"
+    },
+    {
+      "match": "google.com/books*",
+      "group": "read"
+    },
+    {
+      "match": "google.com/collections*",
+      "group": "tools"
+    },
+    {
+      "match": "console.cloud.google.com/*",
+      "group": "dev"
+    },
+    {
+      "match": "portal.azure.com/*",
+      "group": "dev"
+    },
+    {
+      "match": "dev.azure.com/*",
+      "group": "dev"
+    },
+    {
+      "match": "teams.microsoft.com/*",
+      "group": "work"
+    },
+    {
+      "match": "outlook.office.com/mail/*",
+      "group": "email"
+    },
+    {
+      "match": "outlook.office.com/calendar/*",
+      "group": "tools"
+    },
+    {
+      "match": "office.com/launch/*",
+      "group": "work"
+    },
+    {
+      "match": "sharepoint.com/*",
+      "group": "work"
+    },
+    {
+      "match": "console.aws.amazon.com/*",
+      "group": "dev"
+    },
+    {
+      "match": "us-east-1.console.aws.amazon.com/*",
+      "group": "dev"
+    },
+    {
+      "match": "ap-northeast-1.console.aws.amazon.com/*",
+      "group": "dev"
+    },
+    {
+      "match": "aws.amazon.com/console/*",
+      "group": "dev"
+    },
+    {
+      "match": "*.atlassian.net/wiki/*",
+      "group": "docs"
+    },
+    {
+      "match": "*.atlassian.net/jira/*",
+      "group": "work"
+    },
+    {
+      "match": "reddit.com/*",
+      "group": "social"
+    },
+    {
+      "match": "reddit.com/r/*/comments/*",
+      "group": "social"
+    },
+    {
+      "match": "twitter.com/*",
+      "group": "social"
+    },
+    {
+      "match": "x.com/*",
+      "group": "social"
+    },
+    {
+      "match": "facebook.com/*",
+      "group": "social"
+    },
+    {
+      "match": "instagram.com/p/*",
+      "group": "social"
+    },
+    {
+      "match": "instagram.com/reels/*",
+      "group": "social"
+    },
+    {
+      "match": "tiktok.com/@*",
+      "group": "social"
+    },
+    {
+      "match": "linkedin.com/posts/*",
+      "group": "social"
+    },
+    {
+      "match": "linkedin.com/feed/*",
+      "group": "social"
+    },
+    {
+      "match": "linkedin.com/notifications/*",
+      "group": "social"
+    },
+    {
+      "match": "chat.openai.com/*",
+      "group": "ai"
+    },
+    {
+      "match": "chatgpt.com/g/*",
+      "group": "ai"
+    },
+    {
+      "match": "chatgpt.com/c/*",
+      "group": "ai"
+    },
+    {
+      "match": "claude.ai/chat/*",
+      "group": "ai"
+    },
+    {
+      "match": "claude.ai/projects/*",
+      "group": "ai"
+    },
+    {
+      "match": "perplexity.ai/search/*",
+      "group": "ai"
+    },
+    {
+      "match": "phind.com/search*",
+      "group": "ai"
+    },
+    {
+      "match": "bard.google.com/*",
+      "group": "ai"
+    },
+    {
+      "match": "deepseek.com/chat*",
+      "group": "ai"
+    },
+    {
+      "match": "kimi.moonshot.cn/chat/*",
+      "group": "ai"
+    },
+    {
+      "match": "huggingface.co/spaces/*",
+      "group": "ai"
+    },
+    {
+      "match": "huggingface.co/models/*",
+      "group": "ai"
+    },
+    {
+      "match": "huggingface.co/datasets/*",
+      "group": "ai"
+    },
+    {
+      "match": "github.com/features/copilot*",
+      "group": "ai"
+    },
+    {
+      "match": "copilot.microsoft.com/*",
+      "group": "ai"
+    },
+    {
+      "match": "replit.com/@*",
+      "group": "dev"
+    },
+    {
+      "match": "replit.com/repls/*",
+      "group": "dev"
+    },
+    {
+      "match": "amazon.com/gp/product/*",
+      "group": "shop"
+    },
+    {
+      "match": "ebay.com/itm/*",
+      "group": "shop"
+    },
+    {
+      "match": "ebay.com/sch/*",
+      "group": "shop"
+    },
+    {
+      "match": "aliexpress.com/item/*",
+      "group": "shop"
+    },
+    {
+      "match": "taobao.com/item*",
+      "group": "shop"
+    },
+    {
+      "match": "tmall.com/item*",
+      "group": "shop"
+    },
+    {
+      "match": "jd.com/product/*",
+      "group": "shop"
+    },
+    {
+      "match": "bestbuy.com/site/*",
+      "group": "shop"
+    },
+    {
+      "match": "youtube.com/shorts/*",
+      "group": "video"
+    },
+    {
+      "match": "youtube.com/playlist*",
+      "group": "video"
+    },
+    {
+      "match": "youtube.com/channel/*",
+      "group": "video"
+    },
+    {
+      "match": "bilibili.com/bangumi/*",
+      "group": "video"
+    },
+    {
+      "match": "twitch.tv/*/videos/*",
+      "group": "video"
+    },
+    {
+      "match": "twitch.tv/*/clips/*",
+      "group": "video"
+    },
+    {
+      "match": "vimeo.com/*",
+      "group": "video"
+    },
+    {
+      "match": "dailymotion.com/video/*",
+      "group": "video"
+    },
+    {
+      "match": "iqiyi.com/v_*",
+      "group": "video"
+    },
+    {
+      "match": "youku.com/v_show/*",
+      "group": "video"
+    },
+    {
+      "match": "baike.baidu.com/item/*",
+      "group": "read"
+    },
+    {
+      "match": "zhihu.com/column/*",
+      "group": "read"
+    },
+    {
+      "match": "zhihu.com/special/*",
+      "group": "read"
+    },
+    {
+      "match": "feishu.cn/docs/*",
+      "group": "docs"
+    },
+    {
+      "match": "feishu.cn/base/*",
+      "group": "docs"
+    },
+    {
+      "match": "feishu.cn/wiki/*",
+      "group": "docs"
+    },
+    {
+      "match": "larksuite.com/docs/*",
+      "group": "docs"
+    },
+    {
+      "match": "feishu.cn/calendar/*",
+      "group": "tools"
+    },
+    {
+      "match": "todoist.com/app/*",
+      "group": "tools"
+    },
+    {
+      "match": "trello.com/c/*",
+      "group": "work"
+    },
+    {
+      "match": "asana.com/*",
+      "group": "work"
+    },
+    {
+      "match": "clickup.com/task/*",
+      "group": "work"
+    },
+    {
+      "match": "monday.com/boards/*",
+      "group": "work"
+    },
+    {
+      "match": "airtable.com/*",
+      "group": "work"
+    },
+    {
+      "match": "stackoverflow.com/a/*",
+      "group": "dev"
+    },
+    {
+      "match": "stackoverflow.com/tags/*",
+      "group": "dev"
+    },
+    {
+      "match": "npmjs.com/package/*",
+      "group": "dev"
+    },
+    {
+      "match": "pypi.org/project/*",
+      "group": "dev"
+    },
+    {
+      "match": "crates.io/crates/*",
+      "group": "dev"
+    },
+    {
+      "match": "hub.docker.com/r/*",
+      "group": "dev"
+    },
+    {
+      "match": "hub.docker.com/_/*",
+      "group": "dev"
+    },
+    {
+      "match": "leetcode.com/problems/*",
+      "group": "dev"
+    },
+    {
+      "match": "leetcode.com/contest/*",
+      "group": "dev"
+    },
+    {
+      "match": "codesandbox.io/s/*",
+      "group": "dev"
+    },
+    {
+      "match": "codesandbox.io/p/*",
+      "group": "dev"
+    },
+    {
+      "match": "codepen.io/*/pen/*",
+      "group": "dev"
+    },
+    {
+      "match": "jsfiddle.net/*",
+      "group": "dev"
+    },
+    {
+      "match": "observablehq.com/@*",
+      "group": "dev"
+    },
+    {
+      "match": "coinbase.com/accounts/*",
+      "group": "finance"
+    },
+    {
+      "match": "coinbase.com/portfolio/*",
+      "group": "finance"
+    },
+    {
+      "match": "binance.com/trade/*",
+      "group": "finance"
+    },
+    {
+      "match": "binance.com/portfolio/*",
+      "group": "finance"
+    },
+    {
+      "match": "tradingview.com/chart/*",
+      "group": "finance"
+    },
+    {
+      "match": "tradingview.com/symbols/*",
+      "group": "finance"
+    },
+    {
+      "match": "robinhood.com/account/*",
+      "group": "finance"
+    },
+    {
+      "match": "paypal.com/myaccount/*",
+      "group": "finance"
+    },
+    {
+      "match": "stripe.com/dashboard/*",
+      "group": "finance"
+    },
+    {
+      "match": "investing.com/charts/*",
+      "group": "finance"
+    },
+    {
+      "match": "calendar.yahoo.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "outlook.live.com/calendar/*",
+      "group": "tools"
+    },
+    {
+      "match": "calendly.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "google.com/maps/*",
+      "group": "tools"
+    },
+    {
+      "match": "map.baidu.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "gaode.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "spotify.com/playlist/*",
+      "group": "entertain"
+    },
+    {
+      "match": "spotify.com/album/*",
+      "group": "entertain"
+    },
+    {
+      "match": "spotify.com/track/*",
+      "group": "entertain"
+    },
+    {
+      "match": "soundcloud.com/*",
+      "group": "entertain"
+    },
+    {
+      "match": "music.163.com/playlist/*",
+      "group": "entertain"
+    },
+    {
+      "match": "music.163.com/song/*",
+      "group": "entertain"
+    },
+    {
+      "match": "weather.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "accuweather.com/*",
+      "group": "tools"
+    },
+    {
+      "match": "airbnb.com/rooms/*",
+      "group": "tools"
+    },
+    {
+      "match": "booking.com/hotel/*",
+      "group": "tools"
+    },
+    {
+      "match": "expedia.com/hotel/*",
+      "group": "tools"
+    },
+    {
+      "match": "expedia.com/flights/*",
+      "group": "tools"
+    },
+    {
+      "match": "doordash.com/store/*",
+      "group": "tools"
+    },
+    {
+      "match": "ubereats.com/store/*",
+      "group": "tools"
+    },
+    {
+      "match": "yelp.com/biz/*",
+      "group": "tools"
+    },
+    {
+      "match": "yelp.com/search*",
+      "group": "tools"
+    },
+    {
+      "match": "tripadvisor.com/Restaurant*",
+      "group": "tools"
+    }
   ],
   "keyword": [
-    {"words": ["PR #", "pull request", "merge request", "MR !"], "group": "dev"},
-    {"words": ["bug", "ticket", "JIRA", "linear", "story point"], "group": "work"},
-    {"words": ["recipe", "cooking", "baking", "dinner"], "group": "entertain"},
-    {"words": ["sale", "deal", "discount", "coupon", "promo code"], "group": "shop"},
-    {"words": ["tutorial", "guide", "how to", "getting started"], "group": "read"},
-    {"words": ["API", "documentation", "reference", "manual"], "group": "dev"},
-    {"words": ["login", "sign in", "sign up", "register"], "group": "tools"},
-    {"words": ["error", "exception", "failed", "crash", "bug report"], "group": "dev"},
-    {"words": ["invoice", "receipt", "order confirmation", "shipping"], "group": "shop"},
-    {"words": ["meeting", "agenda", "minutes", "standup"], "group": "work"}
+    {
+      "words": [
+        "PR #",
+        "pull request",
+        "merge request",
+        "MR !"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "bug",
+        "ticket",
+        "JIRA",
+        "linear",
+        "story point"
+      ],
+      "group": "work"
+    },
+    {
+      "words": [
+        "recipe",
+        "cooking",
+        "baking",
+        "dinner"
+      ],
+      "group": "entertain"
+    },
+    {
+      "words": [
+        "sale",
+        "deal",
+        "discount",
+        "coupon",
+        "promo code"
+      ],
+      "group": "shop"
+    },
+    {
+      "words": [
+        "tutorial",
+        "guide",
+        "how to",
+        "getting started"
+      ],
+      "group": "read"
+    },
+    {
+      "words": [
+        "API",
+        "documentation",
+        "reference",
+        "manual"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "login",
+        "sign in",
+        "sign up",
+        "register"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "error",
+        "exception",
+        "failed",
+        "crash",
+        "bug report"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "invoice",
+        "receipt",
+        "order confirmation",
+        "shipping"
+      ],
+      "group": "shop"
+    },
+    {
+      "words": [
+        "meeting",
+        "agenda",
+        "minutes",
+        "standup"
+      ],
+      "group": "work"
+    },
+    {
+      "words": [
+        "docker",
+        "containerize",
+        "dockerfile",
+        "docker-compose",
+        "compose.yaml"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "kubernetes",
+        "k8s",
+        "helm",
+        "istio",
+        "knative",
+        "openshift"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "machine learning",
+        "deep learning",
+        "neural network",
+        "model training",
+        "inference"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "data science",
+        "data analysis",
+        "data pipeline",
+        "etl",
+        "data warehouse"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "database",
+        "sql",
+        "nosql",
+        "postgresql",
+        "mongodb",
+        "query",
+        "schema"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "cloud",
+        "aws",
+        "azure",
+        "gcp",
+        "deployment",
+        "infrastructure",
+        "devops"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "security",
+        "vulnerability",
+        "cve",
+        "exploit",
+        "penetration",
+        "authentication"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "react",
+        "vue",
+        "angular",
+        "svelte",
+        "frontend",
+        "component",
+        "jsx"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "typescript",
+        "javascript",
+        "node.js",
+        "deno",
+        "bun",
+        "es6",
+        "module bundler"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "python",
+        "pip",
+        "requirements.txt",
+        "pyproject.toml",
+        "virtualenv",
+        "poetry"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "rust",
+        "cargo",
+        "crates",
+        "trait",
+        "lifetime",
+        "borrow checker",
+        "unsafe"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "go",
+        "golang",
+        "goroutine",
+        "gofmt",
+        "mod",
+        "gopath"
+      ],
+      "group": "dev"
+    },
+    {
+      "words": [
+        "project management",
+        "sprint",
+        "backlog",
+        "kanban",
+        "scrum",
+        "milestone"
+      ],
+      "group": "work"
+    },
+    {
+      "words": [
+        "inbox",
+        "unread",
+        "sent",
+        "draft",
+        "spam",
+        "folder",
+        "compose"
+      ],
+      "group": "email"
+    },
+    {
+      "words": [
+        "watch",
+        "stream",
+        "episode",
+        "season",
+        "live",
+        "broadcast",
+        "upload"
+      ],
+      "group": "video"
+    },
+    {
+      "words": [
+        "podcast",
+        "audio",
+        "music",
+        "playlist",
+        "album",
+        "song",
+        "artist"
+      ],
+      "group": "entertain"
+    },
+    {
+      "words": [
+        "game",
+        "gaming",
+        "play",
+        "multiplayer",
+        "rpg",
+        "fps",
+        "strategy",
+        "level"
+      ],
+      "group": "entertain"
+    },
+    {
+      "words": [
+        "sports",
+        "football",
+        "basketball",
+        "soccer",
+        "nba",
+        "premier league",
+        "match"
+      ],
+      "group": "entertain"
+    },
+    {
+      "words": [
+        "job",
+        "career",
+        "hiring",
+        "apply",
+        "resume",
+        "interview",
+        "salary",
+        "position"
+      ],
+      "group": "work"
+    },
+    {
+      "words": [
+        "medical",
+        "symptom",
+        "diagnosis",
+        "treatment",
+        "prescription",
+        "doctor",
+        "patient"
+      ],
+      "group": "read"
+    },
+    {
+      "words": [
+        "reading",
+        "book",
+        "novel",
+        "chapter",
+        "author",
+        "review",
+        "bestseller"
+      ],
+      "group": "read"
+    },
+    {
+      "words": [
+        "travel",
+        "flight",
+        "hotel",
+        "vacation",
+        "destination",
+        "trip",
+        "book",
+        "reservation"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "shopping",
+        "cart",
+        "checkout",
+        "order",
+        "delivery",
+        "tracking",
+        "shipment"
+      ],
+      "group": "shop"
+    },
+    {
+      "words": [
+        "notification",
+        "alert",
+        "mention",
+        "follow",
+        "like",
+        "comment",
+        "share"
+      ],
+      "group": "social"
+    },
+    {
+      "words": [
+        "stock",
+        "market",
+        "trading",
+        "crypto",
+        "bitcoin",
+        "ethereum",
+        "investment",
+        "portfolio"
+      ],
+      "group": "finance"
+    },
+    {
+      "words": [
+        "bank",
+        "credit card",
+        "mortgage",
+        "loan",
+        "transfer",
+        "deposit",
+        "withdraw"
+      ],
+      "group": "finance"
+    },
+    {
+      "words": [
+        "signup",
+        "registration",
+        "create account",
+        "welcome",
+        "onboarding",
+        "verification"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "ai",
+        "artificial intelligence",
+        "prompt",
+        "chatbot",
+        "gen ai",
+        "llm",
+        "gpt",
+        "text generation"
+      ],
+      "group": "ai"
+    },
+    {
+      "words": [
+        "education",
+        "course",
+        "lecture",
+        "lesson",
+        "class",
+        "tutorial",
+        "learning",
+        "study"
+      ],
+      "group": "read"
+    },
+    {
+      "words": [
+        "health",
+        "fitness",
+        "exercise",
+        "workout",
+        "diet",
+        "nutrition",
+        "wellness",
+        "yoga"
+      ],
+      "group": "read"
+    },
+    {
+      "words": [
+        "recipe",
+        "food",
+        "cooking",
+        "baking",
+        "nutrition",
+        "ingredient",
+        "meal prep"
+      ],
+      "group": "entertain"
+    },
+    {
+      "words": [
+        "personal",
+        "profile",
+        "settings",
+        "preference",
+        "account",
+        "password",
+        "privacy"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "price",
+        "deal",
+        "coupon",
+        "promotion",
+        "offer",
+        "clearance",
+        "discount",
+        "flash sale"
+      ],
+      "group": "shop"
+    },
+    {
+      "words": [
+        "upgrade",
+        "purchase",
+        "subscription",
+        "plan",
+        "billing",
+        "payment",
+        "invoice",
+        "receipt"
+      ],
+      "group": "shop"
+    },
+    {
+      "words": [
+        "help",
+        "support",
+        "faq",
+        "contact",
+        "chat",
+        "service",
+        "customer",
+        "troubleshoot"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "calendar",
+        "schedule",
+        "appointment",
+        "meeting",
+        "event",
+        "reminder",
+        "timeslot"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "map",
+        "direction",
+        "route",
+        "navigation",
+        "traffic",
+        "transit",
+        "location",
+        "address"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "dictionary",
+        "definition",
+        "meaning",
+        "translate",
+        "language",
+        "vocabulary",
+        "thesaurus"
+      ],
+      "group": "tools"
+    },
+    {
+      "words": [
+        "analysis",
+        "report",
+        "dashboard",
+        "metric",
+        "kpi",
+        "analytics",
+        "statistics",
+        "insight"
+      ],
+      "group": "work"
+    },
+    {
+      "words": [
+        "design",
+        "ui",
+        "ux",
+        "wireframe",
+        "prototype",
+        "mockup",
+        "figma",
+        "sketch",
+        "layout"
+      ],
+      "group": "work"
+    },
+    {
+      "words": [
+        "performance",
+        "optimization",
+        "benchmark",
+        "latency",
+        "throughput",
+        "profiling"
+      ],
+      "group": "dev"
+    }
   ]
 }
